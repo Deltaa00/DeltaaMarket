@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+    </style>
+    <title>E-Commerce</title>
+</head>
+<body>
+
+    <!-- <header>
+        <h1>My E-Commerce</h1>
+        <div class="hot-seller">Barang Terlaris Saat Ini!</div>
+    </header> -->
+
+    <div class="top-image-container">
+        <div class="top-image-slider">
+            <img src="foto/ml1.jpg" alt="Top Image" class="top-image">
+            <img src="foto/ml2.jpg" alt="Top Image" class="top-image">
+            <!-- Tambahkan top image lainnya di sini -->
+        </div>
+        <div class="arrow-container">
+            <div class="arrow" onclick="prevImage()">&#9664;</div>
+            <div class="arrow" onclick="nextImage()">&#9654;</div>
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="product">
+                <img src="foto/ml1.jpg" alt="Product 1" class="product-image">
+                <div class="product-label">Mobile Legend</div>
+            </div>
+
+            <div class="product">
+                <img src="foto/ml2.jpg" alt="Product 2" class="product-image">
+                <div class="product-label">Mobile Legend</div>
+            </div>
+
+            <div class="product">
+                <img src="foto/ml1.jpg" alt="Product 3" class="product-image">
+                <div class="product-label">Mobile Legend</div>
+            </div>
+
+            <!-- Tambahkan produk lainnya di sini -->
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="product">
+                <img src="foto/ml1.jpg" alt="Product 4" class="product-image">
+                <div class="product-label">Mobile Legend</div>
+            </div>
+
+            <div class="product">
+                <img src="foto/ml1.jpg" alt="Product 5" class="product-image">
+                <div class="product-label">Mobile Legend</div>
+            </div>
+
+            <div class="product">
+                <img src="foto/ml1.jpg" alt="Product 6" class="product-image">
+                <div class="product-label">Mobile Legend</div>
+            </div>
+
+            <!-- Tambahkan produk lainnya di sini -->
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const topImageSlider = document.querySelector('.top-image-slider');
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % topImageSlider.children.length;
+            updateTopImage();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + topImageSlider.children.length) % topImageSlider.children.length;
+            updateTopImage();
+        }
+
+        function updateTopImage() {
+            const translateValue = `-${currentIndex * 50}%`;
+            topImageSlider.style.transform = `translateX(${translateValue})`;
+        }
+
+        // Fungsi untuk mengganti top image secara otomatis setiap 2 detik
+        setInterval(() => {
+            nextImage();
+        }, 5000);
+    </script>
+
+</body>
+</html>

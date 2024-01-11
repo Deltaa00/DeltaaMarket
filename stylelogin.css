@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #222433;
+}
+
+/*------------ Login container ------------*/
+
+.box-area{
+    width: 930px;
+}
+
+/*------------ left box ------------*/
+/* .left-box {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.left-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.left-box .content {
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+} */
+/*------------ Right box ------------*/
+
+.right-box{
+    padding: 40px 30px 40px 40px;
+}
+
+/*------------ Custom Button Login ------------*/
+.custom-login-btn {
+    background-color : #382f43; /* Replace "your-color" with your desired color code */
+    color: #fff; /* Text color */
+}
+
+.custom-login-btn:hover {
+    background-color: #2b2434; /* Replace "your-hover-color" with your desired hover color code */
+    color: #fff;
+}
+
+/*------------ Custom Placeholder ------------*/
+
+::placeholder{
+    font-size: 16px;
+}
+
+.rounded-4{
+    border-radius: 20px;
+}
+.rounded-5{
+    border-radius: 30px;
+}
+
+
+/*------------ For small screens------------*/
+
+@media only screen and (max-width: 768px){
+
+     .box-area{
+        margin: 0 10px;
+
+     }
+     .left-box{
+        height: 100px;
+        overflow: hidden;
+     }
+     .right-box{
+        padding: 20px;
+     }
+
+}
